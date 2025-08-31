@@ -21,8 +21,8 @@ def sort_letters(letters_dict):
         if key.isalpha():
             char_dict = {"char": key, "num": letters_dict[key]}
             chars.append(char_dict)
-        sorted = chars.sort(key=sort_on, reverse=True)
-    return sorted
+    chars.sort(key=sort_on, reverse=True)
+    return chars
 
 
 

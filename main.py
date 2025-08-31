@@ -7,15 +7,21 @@ def get_book_text(path):
         return f.read()
 
 def main():
-    print(f"{num_words(get_book_text("books/frankenstein.txt"))} words found in the document")
+    book = get_book_text("books/frankenstein.txt")
+    letter_dict_list = sort_letters(num_letters(book))
 
-    letter_dict = num_letters(get_book_text("books/frankenstein.txt"))
-    print(letter_dict)
-    #for letter in letter_dict:
-    #    print(f"{letter}: {letter_dict[letter]}")
+    print("""
+============ BOOKBOT ============
+Analyzing book found at books/frankenstein.txt...
+----------- Word Count ----------
+""")
+    print(f"{num_words(book)} words found in the document")
+    print("--------- Character Count -------")
+    for item in letter_dict_list:
+        print(f"{item["num"]}: {item["char"]}")
+    print("============= END ===============")
 
-    sorted_list = sort_letters(letter_dict)
-    print(sorted_list)
+
 
 main()
 
