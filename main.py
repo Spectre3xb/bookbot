@@ -13,9 +13,8 @@ def main():
     print("""
 ============ BOOKBOT ============
 Analyzing book found at books/frankenstein.txt...
------------ Word Count ----------
-""")
-    print(f"{num_words(book)} words found in the document")
+----------- Word Count ----------""")
+    print(f"Found {num_words(book)} total words")
     print("--------- Character Count -------")
     for item in letter_dict_list:
         print(f"{item["num"]}: {item["char"]}")
