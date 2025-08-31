@@ -17,7 +17,7 @@ Analyzing book found at books/frankenstein.txt...
     print(f"Found {num_words(book)} total words")
     print("--------- Character Count -------")
     for item in letter_dict_list:
-        print(f"{item["num"]}: {item["char"]}")
+        print(f"{item["char"]}: {item["num"]}")
     print("============= END ===============")
 
 
